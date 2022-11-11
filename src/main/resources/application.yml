@@ -1,5 +1,8 @@
 
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
     initialization: always
     url: jdbc:h2:mem:testdb

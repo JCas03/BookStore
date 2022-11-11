@@ -13,7 +13,7 @@ import java.util.UUID;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column
