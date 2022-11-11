@@ -22,7 +22,7 @@ public class BookRepositoryTest {
     @Autowired
     private BookRepository bookRepository;
 
-   /* @Test
+    @Test
     @Sql(scripts = {"classpath:insertInitialBookRecordForTest.sql "})
     void shouldAbleToFetchAllBooksInDB(){
         Iterable<Book> all = bookRepository.findAll();
@@ -36,5 +36,5 @@ public class BookRepositoryTest {
         List<Book> test_title = bookRepository.findBooksByTitle("test title");
         Assertions.assertEquals(test_title.size(), 1);
 
-    }*/
+    }
 }
