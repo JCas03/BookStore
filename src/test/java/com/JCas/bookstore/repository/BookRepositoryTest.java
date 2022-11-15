@@ -22,19 +22,19 @@ public class BookRepositoryTest {
     @Autowired
     private BookRepository bookRepository;
 
-    @Test
-    @Sql(scripts = {"classpath:insertInitialBookRecordForTest.sql "})
-    void shouldAbleToFetchAllBooksInDB(){
-        Iterable<Book> all = bookRepository.findAll();
-        Long totalBookCount = StreamSupport.stream(all.spliterator(),false).count();
-        Assertions.assertEquals(totalBookCount, 2);
-    }
-
-    @Test
-    @Sql(scripts = {"classpath:insertInitialBookRecordForTest.sql "})
-    void shouldReturnOneBookWhenTitleIsTestTitle(){
-        List<Book> test_title = bookRepository.findBooksByTitle("test title");
-        Assertions.assertEquals(test_title.size(), 1);
-
-    }
+//    @Test
+//    @Sql(scripts = {"classpath:insertInitialBookRecordForTest.sql "})
+//    void shouldAbleToFetchAllBooksInDB(){
+//        Iterable<Book> all = bookRepository.findAll();
+//        Long totalBookCount = StreamSupport.stream(all.spliterator(),false).count();
+//        Assertions.assertEquals(totalBookCount, 2);
+//    }
+//
+//    @Test
+//    @Sql(scripts = {"classpath:insertInitialBookRecordForTest.sql "})
+//    void shouldReturnOneBookWhenTitleIsTestTitle(){
+//        List<Book> test_title = bookRepository.findBooksByTitle("test title");
+//        Assertions.assertEquals(test_title.size(), 1);
+//
+//    }
 }
