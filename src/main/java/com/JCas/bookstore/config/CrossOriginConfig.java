@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CrossOriginConfig implements WebMvcConfigurer {
 
     public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("*");
+        registry.addMapping("/**");
+        registry.addMapping("https://book-store-web-v2.herokuapp.com");
     }
 }
