@@ -27,3 +27,7 @@ spring:
     baseline-on-migrate: true
     validate-on-migrate: true
     schemas: heroku_13a6e82d03944bb
+
+server:
+  cors:
+    allowed-origins: "*"
